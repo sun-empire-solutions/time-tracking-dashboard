@@ -6,26 +6,26 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: hsl(226, 43%, 10%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .container {
-  width: 75vw;
-  height: 65vh;
+  width: 978px;
+  height: 50vh;
+  min-height: 420px;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .container {
-    display:flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -33,9 +33,9 @@ body {
     margin-top: auto;
     padding-top: 50px;
     padding-bottom: 30px;
+    min-width: auto;
   }
 }
-
 
 .profile {
   grid-column: span 1;
@@ -43,15 +43,14 @@ body {
   background-color: hsl(235, 46%, 20%);
   display: flex;
   flex-direction: column;
-  border-radius: 20px ;
+  border-radius: 20px;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .profile {
-  width: 320px;
+    width: 90vw;
   }
 }
-
 
 .box {
   border-radius: 20px;
@@ -59,14 +58,12 @@ body {
   overflow: hidden;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .box {
-   
-   height: 180px;
-  width: 320px;
+    width: 90vw;
+    height: 18vh;
   }
 }
-
 
 .box-over {
   width: 100%;
@@ -81,7 +78,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 30%;
+  height: 40%;
   padding: 1rem 2rem;
 }
 
@@ -105,6 +102,17 @@ body {
   padding: 0 2rem;
   font-size: 0.9rem;
   margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .box-content {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  .box-content .content {
+    font-size: 1.5rem;
+  }
 }
 
 .icon-background {
@@ -148,7 +156,7 @@ body {
   background-color: hsl(43, 84%, 65%);
 }
 
-.div-over-profile{
+.div-over-profile {
   width: 100%;
   height: 70%;
   border-radius: 20px;
@@ -157,17 +165,16 @@ body {
   flex-direction: column;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .div-over-profile {
     display: flex;
-   flex-direction: row;
-   font-size: 12px;  
-   height: 120px;
+    flex-direction: row;
+    font-size: 12px;
+    height: 120px;
   }
 }
 
-
-.div-user{
+.div-user {
   width: 60px;
   height: 60px;
   border-radius: 50px;
@@ -178,53 +185,58 @@ body {
   justify-content: center;
   align-items: center;
 }
-.div-user>img{
+
+.div-user > img {
   width: 95%;
   height: 95%;
 }
 
-.information{
-  margin-top: 40px;
+.information {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 2rem 3rem 2rem;
   color: hsl(236, 100%, 87%);
-  margin-left: 30px;
 }
-.information>h1{
+
+@media screen and (max-width: 600px) {
+  .information {
+    margin: 1rem;
+  }
+}
+
+.information > h1 {
   color: #fff;
   margin-top: 5px;
 }
 
-
-.items{
-  margin-left: 30px;
-  margin-top: 12px;
+.items {
   color: hsl(235, 45%, 61%);
 }
 
-
-.calendar{
-  width: 40%;
+.calendar {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 2rem;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .calendar {
-    width: 90%;
-    background-color: hsl(235, 46%, 20%);
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
-    border-radius: 20px ;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-direction: row;
   }
 }
 
-.items:hover{
+.items:hover {
   cursor: pointer;
   color: #fff;
 }
 
-.box-over:hover{
+.box-over:hover {
   cursor: pointer;
   background-color: hsl(235, 45%, 61%);
 }
