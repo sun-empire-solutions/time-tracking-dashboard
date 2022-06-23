@@ -25,6 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
+<img width="959" alt="image" src="https://user-images.githubusercontent.com/26444448/175362661-4056ea5d-56ac-4143-83be-6d4d2a15669f.png">
+
 
 ### Links
 
